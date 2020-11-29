@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main ScreenVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MTMainScreenVC" id="BYZ-38-t0r" customClass="MTMainScreenVC" customModule="MatrixTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fJL-Os-TTp"/>
+                        <viewControllerLayoutGuide type="bottom" id="OMq-cA-QNz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="56" translatesAutoresizingMaskIntoConstraints="NO" id="IoD-Y7-qHJ" customClass="MTSortView" customModule="MatrixTask" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aff-l2-dQg">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aff-l2-dQg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0xL-gs-Uh9"/>
+                            <constraint firstItem="OMq-cA-QNz" firstAttribute="top" secondItem="aff-l2-dQg" secondAttribute="bottom" id="DRH-gL-Ig7"/>
+                            <constraint firstItem="IoD-Y7-qHJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LnD-sG-t5J"/>
+                            <constraint firstAttribute="trailing" secondItem="aff-l2-dQg" secondAttribute="trailing" id="XeN-mH-bft"/>
+                            <constraint firstItem="IoD-Y7-qHJ" firstAttribute="top" secondItem="fJL-Os-TTp" secondAttribute="bottom" id="ekM-Rg-wZM"/>
+                            <constraint firstAttribute="trailing" secondItem="IoD-Y7-qHJ" secondAttribute="trailing" id="nsz-eL-SQQ"/>
+                            <constraint firstItem="aff-l2-dQg" firstAttribute="top" secondItem="IoD-Y7-qHJ" secondAttribute="bottom" id="ua3-XS-wdO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dNj-t0-6bZ"/>
+                    <connections>
+                        <outlet property="countriesTableView" destination="aff-l2-dQg" id="INC-I4-AO6"/>
+                        <outlet property="sortView" destination="IoD-Y7-qHJ" id="nhz-bZ-ZVk"/>
+                        <segue destination="s1K-x3-fBY" kind="presentation" identifier="nextSegue" id="3Wy-U9-6WD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1952.1739130434785" y="138.61607142857142"/>
+        </scene>
+        <!--Bordering CountriesVC-->
+        <scene sceneID="YPa-kS-p2g">
+            <objects>
+                <viewController id="s1K-x3-fBY" customClass="MTBorderingCountriesVC" customModule="MatrixTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fes-0b-alS"/>
+                        <viewControllerLayoutGuide type="bottom" id="kBH-MD-6mt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JKv-3b-UmA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yFf-yP-quO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yFf-yP-quO" firstAttribute="leading" secondItem="JKv-3b-UmA" secondAttribute="leading" id="0Ew-vc-9kB"/>
+                            <constraint firstAttribute="trailing" secondItem="yFf-yP-quO" secondAttribute="trailing" id="DIw-5k-0P6"/>
+                            <constraint firstItem="yFf-yP-quO" firstAttribute="top" secondItem="fes-0b-alS" secondAttribute="bottom" id="Tj9-YI-Hv3"/>
+                            <constraint firstItem="kBH-MD-6mt" firstAttribute="top" secondItem="yFf-yP-quO" secondAttribute="bottom" id="sFo-ch-XY3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="po2-gC-LbV"/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="borderingCountriesTableView" destination="yFf-yP-quO" id="TXk-fh-sZi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wcj-Hf-lrT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2738" y="139"/>
+        </scene>
+    </scenes>
+</document>
